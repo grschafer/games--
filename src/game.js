@@ -43,11 +43,14 @@ window.onload = function() {
                     "src/components/MouseHover.js?v="+version+"",
                     "src/components/CustomTwoway.js?v="+version+"",
                     "src/components/Deadly.js?v="+version+"",
+					"src/components/box2d.js?v="+version+"",
                     "src/entities/base/BaseEntity.js?v="+version+"",
 					"src/entities/floor.js?v="+version+"",
+					"src/entities/box.js?v="+version+"",
 					"src/entities/key.js?v="+version+"",
 					"src/entities/cactus.js?v="+version+"",
 					"src/entities/wires.js?v="+version+""
+					"src/entities/boulder.js?v="+version+""
 	    		];
 
     			//when everything is loaded, run the main scene
