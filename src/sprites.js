@@ -20,7 +20,23 @@ Sprites = Backbone.Model.extend({
                  'elements': {
                      'ufo' : [0, 0]
                  }
-            }
+            },
+			'key_A' : {
+				'file' : 'web/images/computer_key_A.png',
+				'tile' : 128,
+				'tileh': 128,
+				'elements':{
+					'key' : [0,0]
+				}
+			},
+			'key_B' : {
+				'file' : 'web/images/computer_key_Arrow_Right.png',
+				'tile' : 128,
+				'tileh': 128,
+				'elements':{
+					'key' : [0,0]
+				}
+			}
         }
     },
     initialize: function(){

@@ -11,6 +11,6 @@ Crafty.scene("main", function() {
 		sc['ufo'] = new Ufo();
 		infc['info'] = new Info();
 		sc['floor'] = new Floor();
+		sc['key'] = new Key();
 	});
-
 });
