@@ -2,17 +2,56 @@ var registerAssets = function(){
 	Crafty.asset("bg", "web/images/bg.jpg");
 };
 
-var entities = [
+var getEntities = function(version){
 	
-];
+	var entityRoot = "src/entities/";
+	
+	var entities = [
+	entityRoot + "base/BaseEntity.js?v=" + version,
+	entityRoot + "floor.js?v=" + version,
+	entityRoot + "info.js?v=" + version,
+	entityRoot + "startButton.js?v=" + version,
+	entityRoot + "ufo.js?v=" + version,
+	];
+	
+	return entities;
+}
 
-var components = [
+var getScenes = function(version){
 	
-];
+	var sceneRoot = "src/scenes/";
+	
+	var scenes = [
+	sceneRoot + "main.js?v=" + version,
+	sceneRoot + "menu.js?v=" + version,
+	sceneRoot + "level1.js?v=" + version,
+	];
+	
+	return scenes;
+}
 
-var scenes = [
+var getComponents = function(version){
+	var componentRoot = "src/components/";
 	
-];
+	var components = [
+	componentRoot + "CustomTwoway.js?v=" + version,
+	componentRoot + "MouseHover.js?v=" + version,
+	];
+	
+	return components;
+}
+
+var getOthers = function(version){
+	
+	var otherRoot = "src/";
+	
+	var others = [
+	otherRoot + "sprites.js?v=" + version,
+	otherRoot + "config.js?v=" + version,
+	];
+	
+	return others;
+}
 
 window.onload = function() {
 			
@@ -27,16 +66,15 @@ window.onload = function() {
 	} else {
 		version = gameContainer.gameVersion;
 	};
-    
+	
 	//start Crafty
 	Crafty.init(800, 500);
 
 	Crafty.canvas.init();
 	
-	require([
-		"src/sprites.js?v="+version+"",
-		"src/config.js?v="+version+"",
-	], function() {
+	var dependencies = getEntities().concat(getComponents(), getOthers(), getScenes());
+
+	require(dependencies, function() {
 		// Create Sprites
 		var sprites = new Sprites();
 		sprites.create();
@@ -79,12 +117,12 @@ window.onload = function() {
 	var scenes = [
 		"src/scenes/main.js?v="+version+"",
 		"src/scenes/menu.js?v="+version+"",
+		"src/scenes/level1.js?v="+version+"",
 	];
 		
 	require(scenes, function(){});
 
 	//automatically play the loading scene
 	Crafty.scene("loading");
-});
-};
+}
 

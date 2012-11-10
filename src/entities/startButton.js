@@ -4,8 +4,8 @@ StartButton = BaseEntity.extend({
 	},
 	initialize: function(){
 		var model = this;
-		var entity = Crafty.e("2D, "+gameContainer.conf.get('renderType')+", Text, MouseHover");
-		var entity = Crafty.e("2D, DOM, Text");
+//		var entity = Crafty.e("2D, "+gameContainer.conf.get('renderType')+", Text, MouseHover");
+		var entity = Crafty.e("2D, DOM, Text, MouseHover");
 
 		entity
 		.attr({
@@ -21,7 +21,7 @@ StartButton = BaseEntity.extend({
 			'family': 'Arial'
 		})
 		.bind('Click', function(){
-			console.log('click!');
+			Crafty.scene("level1");
 		})
 
 		model.set({
