@@ -42,10 +42,12 @@ window.onload = function() {
                 var elements = [
                     "src/components/MouseHover.js?v="+version+"",
                     "src/components/CustomTwoway.js?v="+version+"",
+                    "src/components/Deadly.js?v="+version+"",
                     "src/entities/base/BaseEntity.js?v="+version+"",
 					"src/entities/floor.js?v="+version+"",
 					"src/entities/key.js?v="+version+"",
-					"src/entities/enemy.js?v="+version+""
+					"src/entities/cactus.js?v="+version+"",
+					"src/entities/wires.js?v="+version+""
 	    		];
 
     			//when everything is loaded, run the main scene
