@@ -4,7 +4,7 @@ Ufo = BaseEntity.extend({
     },
     initialize: function(){
     	var model = this;
-    	var entity = Crafty.e("2D, "+gameContainer.conf.get('renderType')+", Keyboard, ufo, SpriteAnimation, Mouse, Collision, MouseHover, CustomTwoway");
+    	var entity = Crafty.e("2D, "+gameContainer.conf.get('renderType')+", Keyboard, ufo, SpriteAnimation, Mouse, Collision, MouseHover, CustomTwoway, Gravity");
 
     	entity
             .attr({x: ((Crafty.viewport.width/2) - (entity.w/2)), y: 0, z: 300})
@@ -16,6 +16,7 @@ Ufo = BaseEntity.extend({
                 
             })
             .twoway(3, 10, {LEFT_ARROW:180, RIGHT_ARROW:0})
+			.gravity("platform")
             //.bind('KeyDown', function(e) {
             //    if(e.key == Crafty.keys['SPACE']) {
             //        console.log("hey");
