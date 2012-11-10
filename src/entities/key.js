@@ -4,7 +4,7 @@ Key = BaseEntity.extend({
     },
     initialize: function(){
 			var model = this;
-			var entity = Crafty.e("2D, key, Canvas, Collision, Gravity");
+			var entity = Crafty.e("2D, key, Grabbable, Canvas, Collision, Gravity");
 			entity
 				.attr({x: 0, y: 0, z: 1000, w: 64, h: 64})
 				.gravity("platform")

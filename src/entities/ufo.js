@@ -11,6 +11,9 @@ Ufo = BaseEntity.extend({
 			.onHit('Deadly', function() {
 				Crafty.scene("main");
 			})
+			.onHit('Grabbable', function(e) {
+				e[0].obj.destroy();
+			})
 			.bind('EnterFrame', function(e){
 
 			})
