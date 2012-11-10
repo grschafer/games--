@@ -41,6 +41,7 @@ window.onload = function() {
 				// array with local components
                 var elements = [
                     "src/components/MouseHover.js?v="+version+"",
+                    "src/components/CustomTwoway.js?v="+version+"",
                     "src/entities/base/BaseEntity.js?v="+version+"",
 	    		];
 
