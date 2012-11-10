@@ -45,7 +45,8 @@ window.onload = function() {
                     "src/entities/base/BaseEntity.js?v="+version+"",
 					"src/entities/floor.js?v="+version+"",
 					"src/entities/box.js?v="+version+"",
-					"src/entities/key.js?v="+version+""
+					"src/entities/key.js?v="+version+"",
+					"src/entities/enemy.js?v="+version+""
 	    		];
 
     			//when everything is loaded, run the main scene
