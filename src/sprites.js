@@ -63,6 +63,14 @@ Sprites = Backbone.Model.extend({
 					'wires1' : [0,1],
 					'wires2' : [0,2]
 				}
+			},
+			'platform' : {
+				 'file' : 'web/images/SteelBlock1Small.png',
+                 'tile' : 50,
+                 'tileh' : 50,
+                 'elements': {
+					'platform' : [0,0]
+				 }
 			}
         }
     },

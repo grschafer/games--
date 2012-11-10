@@ -24,6 +24,6 @@ Crafty.scene("main", function() {
 		sc['box'] = new Box();
 		sc['boulder'] = new Boulder();
 		sc['p1'] = new Platform(0,50, 500, 100, 60);
-	
+		
 	});
 });
