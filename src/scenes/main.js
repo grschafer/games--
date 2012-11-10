@@ -1,8 +1,8 @@
 Crafty.scene("main", function() {
 
 	var elements = [
-        "src/entities/ufo.js",
-        "src/interfaces/info.js"
+	"src/entities/ufo.js",
+	"src/interfaces/info.js"
 	];
 	
 	//when everything is loaded, run the main scene
