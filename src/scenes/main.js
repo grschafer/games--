@@ -4,8 +4,8 @@ Crafty.scene("main", function() {
         "src/entities/ufo.js",
 		"src/entities/floor.js",
 		"src/entities/cactus.js",
-		"src/entities/wires.js"
-		"src/entities/box.js"
+		"src/entities/wires.js",
+		"src/entities/box.js",
 	];
 	
 	//when everything is loaded, run the main scene
@@ -13,7 +13,6 @@ Crafty.scene("main", function() {
 		sc['ufo'] = new Ufo();
 		sc['cactus'] = new Cactus();
 		sc['wires'] = new Wires();
-		infc['info'] = new Info();
 		sc['floor'] = new Floor();
 		sc['key'] = new Key();
 		sc['box'] = new Box();
