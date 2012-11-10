@@ -18,7 +18,9 @@ Sprites = Backbone.Model.extend({
                  'tile' : 211,
                  'tileh' : 117,
                  'elements': {
-                     'ufo' : [0, 0]
+                     'ufo' : [0, 0],
+                     'right' : [0, 1],
+                     'left' : [0, 2]
                  }
             },
 			'key_A' : {
