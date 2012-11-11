@@ -27,7 +27,8 @@ Ufo = BaseEntity.extend({
 				}
 				else if (e[0].obj._entityName == 'Door') {
 					// TODO: make sure this connects right!
-					Crafty.scene(entity._nextSceneName);
+					Crafty.scene('win');
+//					Crafty.scene(entity._nextSceneName);
 				}
 				e[0].obj.destroy();
 			})

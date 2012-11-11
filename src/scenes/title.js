@@ -23,7 +23,7 @@ Crafty.scene("title", function() {
 	    $('*').on('click', function(){
 			$('*').off('click');
 			Crafty.audio.stop("main");
-			Crafty.scene("joshlevel");
+			Crafty.scene("level1");
 		});
 
 //		sc['ufo'] = new Ufo();

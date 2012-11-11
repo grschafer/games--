@@ -9,6 +9,7 @@ Crafty.scene("level1", function() {
 	require(elements, function() {	   
 		sc['floor'] = new Floor();
 		sc['box'] = new Box();
+		Crafty.audio.play("jungle");
 	});
 
 });
