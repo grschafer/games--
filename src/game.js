@@ -15,6 +15,9 @@ window.onload = function() {
 	//start Crafty
 	Crafty.init(800, 600);
 	Crafty.canvas.init();
+	
+	Crafty.audio.add("main", "src/music/gbu_theme.mp3");
+	Crafty.audio.add("jungle", "src/music/deion_jungle.mp3");
 
 	require([
 	         "src/sprites.js?v="+version+"",

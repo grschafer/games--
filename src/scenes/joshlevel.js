@@ -28,5 +28,6 @@ Crafty.scene("main", function() {
 		sc['p1'] = new Platform(0,50, 500, 100, 50, 1);
 		sc['p2'] = new Platform(0,650, 500, 100, 50, 1);
 		sc['p3'] = new Platform(0,150, 300, 500, 50, 2);
+		
 	});
 });

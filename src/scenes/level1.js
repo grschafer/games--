@@ -11,6 +11,7 @@ Crafty.scene("level1", function() {
 	
 	//when everything is loaded, run the main scene
 	require(elements, function() {	   
+
 		var bg = Crafty.e("2D, Canvas, Image")
              .attr({w: Crafty.viewport.width, h: Crafty.viewport.height, z:0})
              .image("web/images/Background1.jpg", "repeat");
@@ -30,6 +31,8 @@ Crafty.scene("level1", function() {
 		sc['p1'] = new Platform(0,50, 500, 100, 50, 1);
 		sc['p2'] = new Platform(0,650, 500, 100, 50, 1);
 		sc['p3'] = new Platform(0,150, 300, 500, 50, 1);
+		Crafty.audio.play("jungle");
+
 	});
 
 });

@@ -12,7 +12,8 @@ Ufo = BaseEntity.extend({
 			.collision(new Crafty.polygon([21,63],[40,55],[59,52],[71,52],[74,39],[83,24],[102,13],[117,13],[119,13],[136,24],[147,37],[151,51],[174,54],[190,58],[195,62],[200,68],[196,78],[180,85],[148,91],[102,92],[70,91],[46,86],[24,80],[17,68],[18,64]))
 			.onHit('Deadly', function() {
 				// TODO: make sure this connects right!
-				Crafty.scene(entity._currentSceneName);
+//				Crafty.scene(entity._currentSceneName);
+				Crafty.scene('gameover');
 			})
 			.onHit('Grabbable', function(e) {
 				if (e[0].obj._entityName == 'RightArrow') {
@@ -26,7 +27,8 @@ Ufo = BaseEntity.extend({
 				}
 				else if (e[0].obj._entityName == 'Door') {
 					// TODO: make sure this connects right!
-					Crafty.scene(entity._nextSceneName);
+					Crafty.scene('win');
+//					Crafty.scene(entity._nextSceneName);
 				}
 				e[0].obj.destroy();
 			})

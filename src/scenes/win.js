@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Crafty.scene("win", function() {
+=======
+Crafty.scene("gameover", function() {
+>>>>>>> ChrisFree
 
 //	var elements = [
 //        "src/entities/ufo.js",
@@ -16,7 +20,13 @@ Crafty.scene("win", function() {
 
 		var bg = Crafty.e("2D, Canvas, Image, Keyboard")
              .attr({w: Crafty.viewport.width, h: Crafty.viewport.height, z:0})
-             .image("web/images/EndScreen.jpg", "repeat");
+
+             .image("web/images/win.jpg", "repeat")
+			 
+	    $('*').on('click', function(){
+			$('*').off('click');
+			Crafty.scene("title");
+		});
 //		sc['ufo'] = new Ufo();
 //		sc['floor'] = new Floor();
 //		sc['key'] = new Key();
