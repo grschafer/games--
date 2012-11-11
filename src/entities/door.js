@@ -7,7 +7,7 @@ Door = BaseEntity.extend({
 			var entity = Crafty.e("2D, door, Grabbable, Canvas, Collision");
 			entity
 				.attr({x: xpos, y: ypos, z: 1000, w: 85, h: 150})
-				.setName("door");
+				.setName("Door");
 			entity.origin(entity.w/2, entity.h/2);
 			model.set({'entity' : entity});
     },
