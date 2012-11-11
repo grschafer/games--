@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 Crafty.scene("win", function() {
-=======
-Crafty.scene("gameover", function() {
->>>>>>> ChrisFree
+
 
 //	var elements = [
 //        "src/entities/ufo.js",
