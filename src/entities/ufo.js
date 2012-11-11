@@ -17,7 +17,7 @@ Ufo = BaseEntity.extend({
 			.bind('Click', function(){
 				
 			})
-			.twoway(3, 10, {LEFT_ARROW:180, RIGHT_ARROW:0})
+			.twoway(3, 6, {LEFT_ARROW:180, RIGHT_ARROW:0})
 			.gravity('platform')
 			//.bind('KeyDown', function(e) {
 			//	if(e.key == Crafty.keys['SPACE']) {

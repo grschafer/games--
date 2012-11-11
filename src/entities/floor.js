@@ -6,7 +6,7 @@ Floor = BaseEntity.extend({
 			var model = this;
 			var entity = Crafty.e("2D, platform, floor, Canvas, Color, Collision");
 			entity
-				.attr({x: 0, y: (Crafty.viewport.height), z: 1000, w: Crafty.viewport.width, h: 100})
+				.attr({x: 0, y: (Crafty.viewport.height-20), z: 1000, w: Crafty.viewport.width, h: 100})
 				.color("#000000")
 				
 				.setName('Floor');
