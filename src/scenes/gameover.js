@@ -20,7 +20,7 @@ Crafty.scene("gameover", function() {
 			 
 	    $('*').on('click', function(){
 			$('*').off('click');
-			Crafty.scene("level1");
+			Crafty.scene("title");
 		});
 
 //		sc['ufo'] = new Ufo();

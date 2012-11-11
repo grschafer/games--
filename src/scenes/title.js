@@ -18,9 +18,12 @@ Crafty.scene("title", function() {
              .attr({w: Crafty.viewport.width, h: Crafty.viewport.height, z:0})
              .image("web/images/title_screen.jpg", "repeat")
 			 
+		Crafty.audio.play("main");
+			 
 	    $('*').on('click', function(){
 			$('*').off('click');
-			Crafty.scene("level1");
+			Crafty.audio.stop("main");
+			Crafty.scene("joshlevel");
 		});
 
 //		sc['ufo'] = new Ufo();
