@@ -49,6 +49,7 @@ window.onload = function() {
 					"src/entities/floor.js?v="+version+"",
 					"src/entities/box.js?v="+version+"",
 					"src/entities/key.js?v="+version+"",
+					"src/entities/door.js?v="+version+"",
 					"src/entities/cactus.js?v="+version+"",
 					"src/entities/wires.js?v="+version+"",
 					"src/entities/boulder.js?v="+version+"",

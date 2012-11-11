@@ -2,15 +2,17 @@ Ufo = BaseEntity.extend({
 	defaults: {
         'speed' : 2,
     },
-    initialize: function(parent, jumpSpeed, enabledDirs){
+    initialize: function(parent, jumpSpeed, enabledDirs, curScene, nextScene){
     	var model = this;
     	var entity = Crafty.e("2D, "+gameContainer.conf.get('renderType')+", Keyboard, player, SpriteAnimation, Mouse, Collision, MouseHover, CustomTwoway, Gravity");
+		entity._currentSceneName = curScene;
+		entity._nextSceneName = nextScene;
 		entity
 			.attr({x: 0, y: 0, z: 300})
 			.collision(new Crafty.polygon([21,63],[40,55],[59,52],[71,52],[74,39],[83,24],[102,13],[117,13],[119,13],[136,24],[147,37],[151,51],[174,54],[190,58],[195,62],[200,68],[196,78],[180,85],[148,91],[102,92],[70,91],[46,86],[24,80],[17,68],[18,64]))
 			.onHit('Deadly', function() {
 				// TODO: make sure this connects right!
-				Crafty.scene(e[0].obj._currentSceneName);
+				Crafty.scene(entity._currentSceneName);
 			})
 			.onHit('Grabbable', function(e) {
 				if (e[0].obj._entityName == 'RightArrow') {
@@ -24,7 +26,7 @@ Ufo = BaseEntity.extend({
 				}
 				else if (e[0].obj._entityName == 'Door') {
 					// TODO: make sure this connects right!
-					Crafty.scene(e[0].obj._nextSceneName);
+					Crafty.scene(entity._nextSceneName);
 				}
 				e[0].obj.destroy();
 			})

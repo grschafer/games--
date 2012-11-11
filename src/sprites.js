@@ -53,6 +53,14 @@ Sprites = Backbone.Model.extend({
 					'UpArrow' : [0,0]
 				}
 			},
+			'door' : {
+				'file' : 'web/images/Door.png',
+				'tile' : 85,
+				'tileh': 150,
+				'elements':{
+					'door' : [0,0]
+				}
+			},
 			'cactus' : {
 				'file' : 'web/images/CactusFloatingSmall.png',
 				'tile' : 39,
