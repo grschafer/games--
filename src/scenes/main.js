@@ -6,6 +6,7 @@ Crafty.scene("main", function() {
 		"src/entities/cactus.js",
 		"src/entities/wires.js",
 		"src/entities/box.js",
+		"src/entities/platform.js"
 	];
 	
 	//when everything is loaded, run the main scene
@@ -22,7 +23,7 @@ Crafty.scene("main", function() {
 		sc['key'] = new Key();
 		sc['box'] = new Box();
 		sc['boulder'] = new Boulder();
-		var plat = new Platform(10, 20, 50, 60);
+		sc['p1'] = new Platform(0,50, 500, 100, 60);
 	
 	});
 });
