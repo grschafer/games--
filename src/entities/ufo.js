@@ -2,25 +2,41 @@ Ufo = BaseEntity.extend({
 	defaults: {
         'speed' : 2,
     },
-    initialize: function(){
+    initialize: function(parent, jumpSpeed, enabledDirs){
     	var model = this;
     	var entity = Crafty.e("2D, "+gameContainer.conf.get('renderType')+", Keyboard, player, SpriteAnimation, Mouse, Collision, MouseHover, CustomTwoway, Gravity");
 		entity
-			.attr({x: ((Crafty.viewport.width/2) - (entity.w/2)), y: 0, z: 300})
+			.attr({x: 0, y: 0, z: 300})
 			.collision(new Crafty.polygon([21,63],[40,55],[59,52],[71,52],[74,39],[83,24],[102,13],[117,13],[119,13],[136,24],[147,37],[151,51],[174,54],[190,58],[195,62],[200,68],[196,78],[180,85],[148,91],[102,92],[70,91],[46,86],[24,80],[17,68],[18,64]))
 			.onHit('Deadly', function() {
-				Crafty.scene("main");
+				// TODO: make sure this connects right!
+				Crafty.scene(e[0].obj._currentSceneName);
 			})
 			.onHit('Grabbable', function(e) {
+				if (e[0].obj._entityName == 'RightArrow') {
+					entity.twoway(3, 0.0001, {RIGHT_ARROW:0});
+				}
+				else if (e[0].obj._entityName == 'LeftArrow') {
+					entity.twoway(3, 0.0001, {LEFT_ARROW:180, RIGHT_ARROW:0});
+				}
+				else if (e[0].obj._entityName == 'UpArrow') {
+					entity.twoway(3, 2, {LEFT_ARROW:180, RIGHT_ARROW:0});
+				}
+				else if (e[0].obj._entityName == 'Door') {
+					// TODO: make sure this connects right!
+					Crafty.scene(e[0].obj._nextSceneName);
+				}
 				e[0].obj.destroy();
 			})
 			.bind('EnterFrame', function(e){
-
+				if (this._up) {
+					this.stop().animate("jumping", 10, -1);
+				}
 			})
 			.bind('Click', function(){
 				
 			})
-			.twoway(3, 10, {LEFT_ARROW:180, RIGHT_ARROW:0})
+			.twoway(3, jumpSpeed, enabledDirs)
 			.gravity('platform')
 			//.bind('KeyDown', function(e) {
 			//	if(e.key == Crafty.keys['SPACE']) {

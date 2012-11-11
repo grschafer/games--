@@ -6,7 +6,7 @@ Wires = BaseEntity.extend({
 			var model = this;
 			var entity = Crafty.e("2D, wires, Deadly, Canvas, Collision, Gravity, SpriteAnimation");
 			entity
-				.attr({x: 500, y: 0, z: 300, w: 143, h: 74})
+				.attr({x: 500, y: 0, z: 300, w: 70, h: 37})
 				.gravity("platform")
 				.animate("sparks", 0, 0, 2)
 				.animate("sparks", 10, -1)

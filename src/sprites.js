@@ -29,20 +29,28 @@ Sprites = Backbone.Model.extend({
                      'nothing2' : [2, 2],
                  }
             },
-			'key_A' : {
-				'file' : 'web/images/computer_key_A.png',
+			'keyLeft' : {
+				'file' : 'web/images/computer_key_Arrow_Left.png',
 				'tile' : 128,
 				'tileh': 128,
 				'elements':{
-					'key' : [0,0]
+					'LeftArrow' : [0,0]
 				}
 			},
-			'key_B' : {
+			'keyRight' : {
 				'file' : 'web/images/computer_key_Arrow_Right.png',
 				'tile' : 128,
 				'tileh': 128,
 				'elements':{
-					'key' : [0,0]
+					'RightArrow' : [0,0]
+				}
+			},
+			'keyUp' : {
+				'file' : 'web/images/computer_key_Arrow_Up.png',
+				'tile' : 128,
+				'tileh': 128,
+				'elements':{
+					'UpArrow' : [0,0]
 				}
 			},
 			'cactus' : {

@@ -37,12 +37,12 @@ Crafty.c("CustomTwoway", {
         });*/
 
         if (speed) this._speed = speed;
-        jump = jump || this._speed * 2;
+        this._jump = jump || this._speed * 2;
 
         this.bind("EnterFrame", function () {
             if (this.disableControls) return;
             if (this._up) {
-                this.y -= jump;
+                this.y -= this._jump;
                 this._falling = true;
             }
         }).bind("KeyDown", function () {

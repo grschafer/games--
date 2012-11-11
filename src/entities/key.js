@@ -2,13 +2,13 @@ Key = BaseEntity.extend({
 	defaults: {
         
     },
-    initialize: function(){
+    initialize: function(parent, xpos, ypos, name){
 			var model = this;
-			var entity = Crafty.e("2D, key, Grabbable, Canvas, Collision, Gravity");
+			var entity = Crafty.e("2D, " + name + ", Grabbable, Canvas, Collision, Gravity");
 			entity
-				.attr({x: 0, y: 0, z: 1000, w: 64, h: 64})
+				.attr({x: xpos, y: ypos, z: 1000, w: 64, h: 64})
 				.gravity("platform")
-				.setName('Key');
+				.setName(name);
 			entity.origin(entity.w/2, entity.h/2);
 			model.set({'entity' : entity});
     },
