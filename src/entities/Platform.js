@@ -4,11 +4,11 @@ Platform = BaseEntity.extend({
     },
     initialize: function(parent, xpos, ypos, width, height){
 			var model = this;
-			var entity = Crafty.e("2D, platform, floor, Canvas, Color, Collision");
+			var entity = Crafty.e("2D, platform, floor, Canvas, Collision");
 			entity
 				.attr({x: xpos, y: ypos, z: 1000, w: width, h: height})
-				.color("#FFFFFF")
 				.setName('Platform');
+				
 			entity.origin(entity.w/2, entity.h/2);
 			model.set({'entity' : entity});
     },
