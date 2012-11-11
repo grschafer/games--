@@ -1,4 +1,4 @@
-Box = BaseEntity.extend({
+Boulder = BaseEntity.extend({
 	defaults: {
 
     },
@@ -8,11 +8,11 @@ Box = BaseEntity.extend({
 		var entity = Crafty.e("2D, Canvas, Color, Box2D, Gravity");
 		
 		entity
-			 .attr({ x: 80, y: 100, w:10, h:10})
+			 .attr({ x: 80, y: 0, w:50, h:10})
 			 .color("#FF0000")
 			 .gravity("platform")
 			 .box2d({
-					bodyType: 'static'
+					bodyType: 'dynamic'
 			 });
 
     	model.set({'entity' : entity });

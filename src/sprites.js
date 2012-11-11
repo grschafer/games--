@@ -44,6 +44,25 @@ Sprites = Backbone.Model.extend({
 				'elements':{
 					'key' : [0,0]
 				}
+			},
+			'cactus' : {
+				'file' : 'web/images/CactusFloatingSmall.png',
+				'tile' : 39,
+				'tileh': 100,
+				'elements':{
+					'cactus' : [0,0],
+					'cactus1' : [0,1]
+				}
+			},
+			'wires' : {
+				'file' : 'web/images/WireSparkingSmall.png',
+				'tile' : 143,
+				'tileh': 74,
+				'elements':{
+					'wires' : [0,0],
+					'wires1' : [0,1],
+					'wires2' : [0,2]
+				}
 			}
         }
     },

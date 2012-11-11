@@ -1,13 +1,15 @@
 //Asteroid component
 Crafty.c("Deadly", {   
 	init: function(startX, startY) {
+
 		this.origin("center");
 		this.attr({
 			x: startX,
 			y: startY
 		}).bind("EnterFrame", function() {
-		}).collision()
-		.onHit("bullet", function(e) {
+		})
+		//.collision()
+		//.onHit("bullet", function(e) {
 			/*//if hit by a bullet increment the score
 			player.score += 5;
 			score.text("Score: "+player.score);
@@ -35,7 +37,7 @@ Crafty.c("Deadly", {
 			//split into two asteroids by creating another asteroid
 			Crafty.e("2D, DOM, "+size+", Collision, asteroid").attr({x: this._x, y: this._y});
 			*/
-		});
+		//});
 
 	}
 });
