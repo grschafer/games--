@@ -11,8 +11,10 @@ Crafty.scene("main", function() {
 	require(elements, function() {	   
 		sc['ufo'] = new Ufo();
 		sc['enemy'] = new Enemy();
-		infc['info'] = new Info();
 		sc['floor'] = new Floor();
 		sc['key'] = new Key();
+		var bg = Crafty.e("2D, Canvas, Image")
+             .attr({w: Crafty.viewport.width, h: Crafty.viewport.height, z:1})
+             .image("web/images/Background1.jpg", "repeat");
 	});
 });

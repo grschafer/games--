@@ -6,7 +6,7 @@ Enemy = BaseEntity.extend({
 			var model = this;
 			var entity = Crafty.e("2D, key, Deadly, Canvas, Collision, Gravity");
 			entity
-				.attr({x: 200, y: 0, z: 300, w: 64, h: 64})
+				.attr({x: 200, y: 0, z: 1000, w: 64, h: 64})
 				.gravity("platform")
 				.setName('Enemy');
 			entity.origin(entity.w/2, entity.h/2);
