@@ -6,7 +6,7 @@ Key = BaseEntity.extend({
 			var model = this;
 			var entity = Crafty.e("2D, key, Canvas, Collision, Gravity");
 			entity
-				.attr({x: 0, y: 0, z: 300, w: 64, h: 64})
+				.attr({x: 0, y: 0, z: 1000, w: 64, h: 64})
 				.gravity("platform")
 				.setName('Key');
 			entity.origin(entity.w/2, entity.h/2);

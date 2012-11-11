@@ -11,10 +11,9 @@ Crafty.scene("main", function() {
 	//when everything is loaded, run the main scene
 	require(elements, function() {
 		var bg = Crafty.e("2D, Canvas, Image")
-             .attr({w: Crafty.viewport.width, h: Crafty.viewport.height, z:1})
+             .attr({w: Crafty.viewport.width, h: Crafty.viewport.height, z:0})
              .image("web/images/Background1.jpg", "repeat");
 		sc['ufo'] = new Ufo();
-		sc['enemy'] = new Enemy();
 		sc['floor'] = new Floor();
 		sc['key'] = new Key();
 		sc['cactus'] = new Cactus();
@@ -23,5 +22,7 @@ Crafty.scene("main", function() {
 		sc['key'] = new Key();
 		sc['box'] = new Box();
 		sc['boulder'] = new Boulder();
+		var plat = new Platform(10, 20, 50, 60);
+	
 	});
 });
